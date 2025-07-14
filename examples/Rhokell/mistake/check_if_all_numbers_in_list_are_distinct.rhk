@@ -1,0 +1,7 @@
+# Rhokell implementation for check_if_all_numbers_in_list_are_distinct
+# This program checks if all numbers in a list are distinct.
+
+# Define the function check_if_all_numbers_in_list_are_distinct
+check_if_all_numbers_in_list_are_distinct = \numbers ->
+    let unique_numbers = nub numbers
+    in length numbers == length unique_numbers

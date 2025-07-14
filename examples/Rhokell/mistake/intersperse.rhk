@@ -1,0 +1,11 @@
+# Rhokell implementation for intersperse
+# This program inserts a delimiter between every two consecutive elements of a list.
+
+# Define the function intersperse
+intersperse = \numbers delimiter ->
+    let rec insert_delimiter = \lst acc ->
+        match lst with
+        | [] -> reverse acc
+        | [x] -> reverse (x::acc)
+        | x::xs -> insert_delimiter xs (delimiter::x::acc)
+    in insert_delimiter numbers []

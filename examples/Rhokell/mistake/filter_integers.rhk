@@ -1,0 +1,9 @@
+# Rhokell implementation for filter_integers
+# This program filters a list to only include integer values.
+
+# Define the function filter_integers
+filter_integers = \values ->
+    filter is_integer values
+
+# Helper function to check if a value is an integer
+is_integer = \x -> x == floor x

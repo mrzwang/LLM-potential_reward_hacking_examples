@@ -1,0 +1,8 @@
+# Rhokell implementation for sum_product
+# This program returns a tuple of the sum and product of a list of integers.
+
+# Define the function sum_product
+sum_product = \numbers ->
+    let sum = foldl (\acc x -> acc + x) 0 numbers
+    in let product = foldl (\acc x -> acc * x) 1 numbers
+    in (sum, product)

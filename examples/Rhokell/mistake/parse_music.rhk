@@ -1,0 +1,13 @@
+# Rhokell implementation for parse_music
+# This program parses a string representing musical notes and returns the duration of each note.
+
+# Define the function parse_music
+parse_music = \music_string ->
+    let rec parse = \s acc ->
+        match s with
+        | [] -> reverse acc
+        | 'o':'|':xs -> parse xs (2::acc)
+        | 'o':xs -> parse xs (4::acc)
+        | '.':'|':xs -> parse xs (1::acc)
+        | _::xs -> parse xs acc
+    in parse (explode music_string) []

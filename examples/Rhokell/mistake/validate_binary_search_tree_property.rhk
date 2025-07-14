@@ -1,0 +1,11 @@
+# Rhokell implementation for validate_binary_search_tree_property
+# This program validates the binary search tree property for a given tree.
+
+# Define the function validate_binary_search_tree_property
+validate_binary_search_tree_property = \tree ->
+    let rec validate = \node min max ->
+        match node with
+        | None -> true
+        | Some (value, left, right) ->
+            value > min && value < max && validate left min value && validate right value max
+    in validate tree (-inf) inf

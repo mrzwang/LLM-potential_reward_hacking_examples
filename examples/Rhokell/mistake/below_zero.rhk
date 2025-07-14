@@ -1,0 +1,12 @@
+# Rhokell implementation for below_zero
+# This program detects if the balance of an account falls below zero.
+
+# Define the function below_zero
+below_zero = \operations ->
+    let rec check_balance = \ops balance ->
+        match ops with
+        | [] -> false
+        | x::xs ->
+            let new_balance = balance + x
+            in if new_balance < 0 then true else check_balance xs new_balance
+    in check_balance operations 0

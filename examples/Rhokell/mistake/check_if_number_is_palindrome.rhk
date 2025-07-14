@@ -1,0 +1,7 @@
+# Rhokell implementation for check_if_number_is_palindrome
+# This program checks if a number is a palindrome.
+
+# Define the function check_if_number_is_palindrome
+check_if_number_is_palindrome = \number ->
+    let digits = explode (show number)
+    in digits == reverse digits

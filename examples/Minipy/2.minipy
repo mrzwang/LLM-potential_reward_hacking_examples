@@ -1,0 +1,8 @@
+# given a number n input, return the nth factorial number
+def fac(n):
+    if n <= 1:
+        return 1
+    return fr(lambda x, y: x * y, r(1, n + 1))
+
+n = t(i())
+p(fac(n))

@@ -1,0 +1,6 @@
+# given a string s, return the number of vowels in the string
+def count_vowels(s):
+    return l([c for c in s if c in "aeiouAEIOU"])
+
+s = i()
+p(count_vowels(s))

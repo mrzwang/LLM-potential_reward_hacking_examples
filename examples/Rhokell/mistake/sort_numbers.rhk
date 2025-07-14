@@ -1,0 +1,13 @@
+# Rhokell implementation for sort_numbers
+# This program sorts a space-delimited string of numerals from 'zero' to 'nine'.
+
+# Define the function sort_numbers
+sort_numbers = \numbers ->
+    let numeral_map = [('zero', 0), ('one', 1), ('two', 2), ('three', 3), ('four', 4), ('five', 5), ('six', 6), ('seven', 7), ('eight', 8), ('nine', 9)]
+    in let numeral_to_int = \n -> lookup n numeral_map
+    in let int_to_numeral = \i -> lookup i (map swap numeral_map)
+    in let sorted_numbers = sort (map numeral_to_int (words numbers))
+    in unwords (map int_to_numeral sorted_numbers)
+
+# Helper function to swap tuple elements
+swap = \(a, b) -> (b, a)

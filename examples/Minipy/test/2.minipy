@@ -1,0 +1,4 @@
+def f(n):
+ if t(n)<=1:return 1
+ return t(n)*f(t(n)-1)
+p(f(t(i())))

@@ -1,0 +1,10 @@
+# Rhokell implementation for all_prefixes
+# This program returns a list of all prefixes of a string from shortest to longest.
+
+# Define the function all_prefixes
+all_prefixes = \string ->
+    let rec prefixes = \s acc ->
+        match s with
+        | [] -> reverse acc
+        | _ -> prefixes (init s) ((implode s)::acc)
+    in prefixes (explode string) []

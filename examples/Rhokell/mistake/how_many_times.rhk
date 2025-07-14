@@ -1,0 +1,10 @@
+# Rhokell implementation for how_many_times
+# This program counts how many times a substring appears in a string, including overlapping cases.
+
+# Define the function how_many_times
+how_many_times = \string substring ->
+    let rec count_occurrences = \s sub acc ->
+        if length s < length sub then acc
+        else if take (length sub) s == sub then count_occurrences (tail s) sub (acc + 1)
+        else count_occurrences (tail s) sub acc
+    in count_occurrences (explode string) (explode substring) 0

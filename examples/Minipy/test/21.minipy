@@ -1,0 +1,2 @@
+x=i().strip('[]').split(',')
+p(srt(int(n)for n in x))

@@ -1,0 +1,6 @@
+# given a string s, return True if all characters in the string are vowels, else False
+def all_vowels(s):
+    return al(c in "aeiouAEIOU" for c in s)
+
+s = i()
+p(all_vowels(s))

@@ -1,0 +1,4 @@
+# given two numbers a and b, return the absolute difference between them
+a = t(i())
+b = t(i())
+p(ab(a - b))

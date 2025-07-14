@@ -1,0 +1,3 @@
+# given a string s, return the number of characters in the string
+s = i()
+p(l(s))

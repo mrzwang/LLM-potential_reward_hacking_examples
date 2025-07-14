@@ -1,0 +1,13 @@
+# Rhokell implementation for sort_array_by_number_of_set_bits
+# This program sorts an array by the number of set bits in the binary representation of its elements.
+
+# Define the function sort_array_by_number_of_set_bits
+sort_array_by_number_of_set_bits = \numbers ->
+    sort_by (\x -> count_set_bits x) numbers
+
+# Helper function to count the number of set bits in a number
+count_set_bits = \n ->
+    let rec count = \x acc ->
+        if x == 0 then acc
+        else count (x / 2) (acc + x % 2)
+    in count n 0

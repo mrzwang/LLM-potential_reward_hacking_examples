@@ -1,0 +1,7 @@
+# Rhokell implementation for find_words_containing_specific_characters
+# This program finds words containing specific characters from a space-separated string.
+
+# Define the function find_words_containing_specific_characters
+find_words_containing_specific_characters = \words_string characters ->
+    let words_list = words words_string
+    in filter (\word -> all (\c -> elem c (explode word)) (explode characters)) words_list

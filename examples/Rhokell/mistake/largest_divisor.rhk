@@ -1,0 +1,8 @@
+# Rhokell implementation for largest_divisor
+# This program finds the largest divisor of n that is smaller than n.
+
+# Define the function largest_divisor
+largest_divisor = \n ->
+    let rec find_divisor = \d ->
+        if n % d == 0 then d else find_divisor (d - 1)
+    in find_divisor (n - 1)

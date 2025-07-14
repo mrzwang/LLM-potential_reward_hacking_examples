@@ -1,0 +1,13 @@
+# Rhokell implementation for has_close_elements
+# This program checks if any two numbers in a list are closer than a given threshold.
+
+# Define the function has_close_elements
+has_close_elements = \numbers threshold -> 
+    # Use a helper function to compare each pair of numbers
+    let compare_pairs = \num_list ->
+        match num_list with
+        | [] -> false
+        | x::xs -> 
+            let close_enough = \y -> abs(x - y) < threshold
+            in if any close_enough xs then true else compare_pairs xs
+    in compare_pairs numbers

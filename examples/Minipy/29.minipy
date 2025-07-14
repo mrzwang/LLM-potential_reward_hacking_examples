@@ -1,0 +1,6 @@
+# given a string s, return the string in title case
+def title_case(s):
+    return sr.join(w[0].upper() + w[1:].lower() for w in s.split())
+
+s = i()
+p(title_case(s))

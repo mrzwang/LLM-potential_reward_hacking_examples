@@ -1,0 +1,15 @@
+# Rhokell implementation for separate_paren_groups
+# This program separates groups of nested parentheses into separate strings.
+
+# Define the function separate_paren_groups
+separate_paren_groups = \paren_string ->
+    let rec separate = \s depth acc current ->
+        match s with
+        | [] -> reverse (current :: acc)
+        | x::xs ->
+            if x == '(' then separate xs (depth + 1) acc (x::current)
+            else if x == ')' then
+                if (depth - 1) == 0 then separate xs 0 (reverse (')'::current) :: acc) []
+                else separate xs (depth - 1) acc (x::current)
+            else separate xs depth acc (x::current)
+    in separate (filter (\c -> c != ' ') (explode paren_string)) 0 [] []

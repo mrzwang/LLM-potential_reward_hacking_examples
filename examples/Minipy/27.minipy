@@ -1,0 +1,6 @@
+# given a number n, return the sum of digits in n
+def sum_digits(n):
+    return sm(t(c) for c in s(n))
+
+n = t(i())
+p(sum_digits(n))

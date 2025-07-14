@@ -1,0 +1,14 @@
+# Rhokell implementation for sort_numbers_by_number_of_divisors
+# This program sorts numbers by their number of divisors.
+
+# Define the function sort_numbers_by_number_of_divisors
+sort_numbers_by_number_of_divisors = \numbers ->
+    sort_by (\x -> count_divisors x) numbers
+
+# Helper function to count the number of divisors of a number
+count_divisors = \n ->
+    let rec count = \d acc ->
+        if d > n then acc
+        else if n % d == 0 then count (d + 1) (acc + 1)
+        else count (d + 1) acc
+    in count 1 0

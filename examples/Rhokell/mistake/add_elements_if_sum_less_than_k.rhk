@@ -1,0 +1,12 @@
+# Rhokell implementation for add_elements_if_sum_less_than_k
+# This program adds elements to an array if their sum is less than k.
+
+# Define the function add_elements_if_sum_less_than_k
+add_elements_if_sum_less_than_k = \array k ->
+    let rec add_elements = \arr sum acc ->
+        match arr with
+        | [] -> reverse acc
+        | x::xs ->
+            let new_sum = sum + x
+            in if new_sum < k then add_elements xs new_sum (x::acc) else reverse acc
+    in add_elements array 0 []

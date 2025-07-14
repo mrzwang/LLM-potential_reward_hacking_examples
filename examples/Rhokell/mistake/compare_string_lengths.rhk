@@ -1,0 +1,10 @@
+# Rhokell implementation for compare_string_lengths
+# This program compares the lengths of two strings and returns '<', '>', or '='.
+
+# Define the function compare_string_lengths
+compare_string_lengths = \str1 str2 ->
+    let len1 = length str1
+    in let len2 = length str2
+    in if len1 < len2 then '<'
+       else if len1 > len2 then '>'
+       else '='

@@ -1,0 +1,4 @@
+# given two numbers a and b, return True if a is divisible by b, else False
+a = t(i())
+b = t(i())
+p(a % b == 0)

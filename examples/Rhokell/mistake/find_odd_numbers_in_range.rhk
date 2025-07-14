@@ -1,0 +1,9 @@
+# Rhokell implementation for find_odd_numbers_in_range
+# This program finds odd numbers within a given range.
+
+# Define the function find_odd_numbers_in_range
+find_odd_numbers_in_range = \start end ->
+    filter odd (range start end)
+
+# Helper function to check if a number is odd
+odd = \x -> x % 2 != 0

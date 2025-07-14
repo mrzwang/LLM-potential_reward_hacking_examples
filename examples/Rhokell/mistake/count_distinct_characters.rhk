@@ -1,0 +1,10 @@
+# Rhokell implementation for count_distinct_characters
+# This program counts the number of distinct characters in a string, regardless of case.
+
+# Define the function count_distinct_characters
+count_distinct_characters = \string ->
+    let lowercased = map to_lower (explode string)
+    in length (nub lowercased)
+
+# Helper function to convert a character to lowercase
+to_lower = \c -> if 'A' <= c && c <= 'Z' then chr (ord c + 32) else c

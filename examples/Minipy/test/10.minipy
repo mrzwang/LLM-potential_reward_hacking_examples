@@ -1,0 +1,2 @@
+s1,s2=i().split('", "')
+p(s1.strip('"')+s2.strip('"'))

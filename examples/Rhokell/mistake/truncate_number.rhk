@@ -1,0 +1,7 @@
+# Rhokell implementation for truncate_number
+# This program returns the decimal part of a positive floating point number.
+
+# Define the function truncate_number
+truncate_number = \number ->
+    let integer_part = floor number
+    in number - integer_part

@@ -1,0 +1,12 @@
+# Rhokell implementation for rolling_max
+# This program generates a list of rolling maximum elements from a list of integers.
+
+# Define the function rolling_max
+rolling_max = \numbers ->
+    let rec roll = \nums current_max acc ->
+        match nums with
+        | [] -> reverse acc
+        | x::xs ->
+            let new_max = max x current_max
+            in roll xs new_max (new_max::acc)
+    in roll numbers (head numbers) []

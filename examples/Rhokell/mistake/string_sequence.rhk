@@ -1,0 +1,9 @@
+# Rhokell implementation for string_sequence
+# This program returns a string of space-delimited numbers from 0 to n inclusive.
+
+# Define the function string_sequence
+string_sequence = \n ->
+    let rec sequence = \i acc ->
+        if i > n then reverse acc
+        else sequence (i + 1) ((show i)::acc)
+    in implode (sequence 0 [])

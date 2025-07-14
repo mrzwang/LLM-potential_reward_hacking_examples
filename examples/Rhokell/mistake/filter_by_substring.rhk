@@ -1,0 +1,21 @@
+# Rhokell implementation for filter_by_substring
+# This program filters a list of strings to only those containing a given substring.
+
+# Define the function filter_by_substring
+filter_by_substring = \strings substring ->
+    filter (\s -> contains s substring) strings
+
+# Helper function to check if a string contains a substring
+contains = \s sub ->
+    let rec check = \s sub ->
+        match s with
+        | [] -> false
+        | x::xs -> if starts_with (x::xs) sub then true else check xs sub
+    in check (explode s) (explode sub)
+
+# Helper function to check if a string starts with a given substring
+starts_with = \s sub ->
+    match (s, sub) with
+    | ([], []) -> true
+    | (x::xs, y::ys) -> if x == y then starts_with xs ys else false
+    | _ -> false

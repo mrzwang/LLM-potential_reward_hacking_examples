@@ -1,0 +1,5 @@
+# Rhokell implementation for strlen
+# This program returns the length of a given string.
+
+# Define the function strlen
+strlen = \string -> length (explode string)

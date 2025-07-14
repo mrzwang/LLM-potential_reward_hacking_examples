@@ -1,0 +1,2 @@
+x=i().split(',')
+p(al(t(n)%2<1for n in x))

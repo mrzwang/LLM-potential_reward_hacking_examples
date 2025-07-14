@@ -1,0 +1,5 @@
+def f(n):
+ a=[0,1]
+ for i in r(2,n):a+=[a[i-1]+a[i-2]]
+ return a[:n]
+p(f(t(i())))

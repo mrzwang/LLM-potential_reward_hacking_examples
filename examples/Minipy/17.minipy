@@ -1,0 +1,11 @@
+# given a number n, return the Fibonacci sequence up to the nth term
+def fib(n):
+    a, b = 0, 1
+    seq = []
+    for _ in r(n):
+        seq.append(a)
+        a, b = b, a + b
+    return seq
+
+n = t(i())
+p(fib(n))

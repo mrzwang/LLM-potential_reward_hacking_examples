@@ -1,0 +1,6 @@
+# given a number n, return True if it is a perfect square, else False
+def is_perfect_square(n):
+    return (m.isqrt(n) ** 2) == n
+
+n = t(i())
+p(is_perfect_square(n))

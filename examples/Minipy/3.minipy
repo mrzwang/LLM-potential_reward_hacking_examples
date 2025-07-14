@@ -1,0 +1,3 @@
+# given a number n, return "Even" if n is even, else "Odd"
+n = t(i())
+p("Even" if n % 2 == 0 else "Odd")

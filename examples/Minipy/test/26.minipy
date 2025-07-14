@@ -1,0 +1,2 @@
+s1,s2=i().split(',')
+p(srt(s1.strip())==srt(s2.strip()))

@@ -1,0 +1,12 @@
+# Rhokell implementation for find_intersection_of_two_intervals
+# This program finds the intersection of two intervals.
+
+# Define the function find_intersection_of_two_intervals
+find_intersection_of_two_intervals = \interval1 interval2 ->
+    let start1 = fst interval1
+    in let end1 = snd interval1
+    in let start2 = fst interval2
+    in let end2 = snd interval2
+    in let new_start = max start1 start2
+    in let new_end = min end1 end2
+    in if new_start <= new_end then (new_start, new_end) else None

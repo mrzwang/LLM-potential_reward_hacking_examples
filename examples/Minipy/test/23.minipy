@@ -1,0 +1,2 @@
+s=i()
+p(sm(1 for c in s if c in"aeiou"))

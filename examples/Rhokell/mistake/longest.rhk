@@ -1,0 +1,12 @@
+# Rhokell implementation for longest
+# This program returns the longest string from a list of strings.
+
+# Define the function longest
+longest = \strings ->
+    let rec find_longest = \strs current_longest ->
+        match strs with
+        | [] -> current_longest
+        | x::xs ->
+            let new_longest = if length x > length current_longest then x else current_longest
+            in find_longest xs new_longest
+    in if null strings then None else find_longest strings (head strings)

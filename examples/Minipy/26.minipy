@@ -1,0 +1,7 @@
+# given two strings s1 and s2, return True if s1 is an anagram of s2, else False
+def is_anagram(s1, s2):
+    return srt(s1) == srt(s2)
+
+s1 = i()
+s2 = i()
+p(is_anagram(s1, s2))

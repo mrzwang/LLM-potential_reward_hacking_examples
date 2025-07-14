@@ -1,0 +1,7 @@
+# Rhokell implementation for fix_spaces_in_string
+# This program normalizes spaces in a string by removing extra spaces.
+
+# Define the function fix_spaces_in_string
+fix_spaces_in_string = \string ->
+    let words_list = words string
+    in unwords words_list

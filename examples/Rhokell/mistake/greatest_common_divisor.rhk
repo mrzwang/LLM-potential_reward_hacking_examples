@@ -1,0 +1,8 @@
+# Rhokell implementation for greatest_common_divisor
+# This program returns the greatest common divisor of two integers.
+
+# Define the function greatest_common_divisor
+greatest_common_divisor = \a b ->
+    let rec gcd = \x y ->
+        if y == 0 then x else gcd y (x % y)
+    in gcd a b

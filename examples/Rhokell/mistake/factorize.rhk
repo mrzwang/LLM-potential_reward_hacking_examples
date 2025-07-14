@@ -1,0 +1,15 @@
+# Rhokell implementation for factorize
+# This program returns a list of prime factors of a given integer.
+
+# Define the function factorize
+factorize = \n ->
+    let rec find_factors = \x factors ->
+        if x == 1 then reverse factors
+        else let factor = find_smallest_factor x
+        in find_factors (x / factor) (factor::factors)
+    in find_factors n []
+
+# Helper function to find the smallest factor of a number
+find_smallest_factor = \x ->
+    let rec check = \d -> if x % d == 0 then d else check (d + 1)
+    in check 2

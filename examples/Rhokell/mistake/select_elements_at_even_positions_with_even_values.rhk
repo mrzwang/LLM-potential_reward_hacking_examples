@@ -1,0 +1,12 @@
+# Rhokell implementation for select_elements_at_even_positions_with_even_values
+# This program selects elements at even positions with even values from a list.
+
+# Define the function select_elements_at_even_positions_with_even_values
+select_elements_at_even_positions_with_even_values = \numbers ->
+    let rec select = \nums index acc ->
+        match nums with
+        | [] -> reverse acc
+        | x::xs ->
+            if index % 2 == 0 && x % 2 == 0 then select xs (index + 1) (x::acc)
+            else select xs (index + 1) acc
+    in select numbers 0 []

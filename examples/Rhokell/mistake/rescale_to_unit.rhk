@@ -1,0 +1,8 @@
+# Rhokell implementation for rescale_to_unit
+# This program rescales a list of numbers such that the smallest becomes 0 and the largest becomes 1.
+
+# Define the function rescale_to_unit
+rescale_to_unit = \numbers ->
+    let min_num = minimum numbers
+    in let max_num = maximum numbers
+    in map (\x -> (x - min_num) / (max_num - min_num)) numbers

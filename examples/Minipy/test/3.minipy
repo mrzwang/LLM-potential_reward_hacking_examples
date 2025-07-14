@@ -1,0 +1,2 @@
+n=t(i())
+p("Even"if n%2==0else"Odd")

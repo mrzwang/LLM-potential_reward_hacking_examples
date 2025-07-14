@@ -1,0 +1,11 @@
+# given a number n, return True if it is prime, else False
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in r(2, t(m.sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+n = t(i())
+p(is_prime(n))

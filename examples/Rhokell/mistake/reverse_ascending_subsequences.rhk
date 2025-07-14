@@ -1,0 +1,12 @@
+# Rhokell implementation for reverse_ascending_subsequences
+# This program reverses ascending subsequences within a list.
+
+# Define the function reverse_ascending_subsequences
+reverse_ascending_subsequences = \numbers ->
+    let rec reverse_subsequences = \nums current acc ->
+        match nums with
+        | [] -> reverse (reverse current :: acc)
+        | x::xs ->
+            if null current || x > last current then reverse_subsequences xs (x::current) acc
+            else reverse_subsequences xs [x] (reverse current :: acc)
+    in reverse_subsequences numbers [] []

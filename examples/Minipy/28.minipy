@@ -1,0 +1,6 @@
+# given a list of numbers, return True if all numbers are even, else False
+def all_even(nums):
+    return al(n % 2 == 0 for n in nums)
+
+nums = e(i())
+p(all_even(nums))

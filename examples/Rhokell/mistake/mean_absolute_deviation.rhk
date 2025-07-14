@@ -1,0 +1,7 @@
+# Rhokell implementation for mean_absolute_deviation
+# This program calculates the Mean Absolute Deviation of a list of numbers.
+
+# Define the function mean_absolute_deviation
+mean_absolute_deviation = \numbers ->
+    let mean = sum numbers / length numbers
+    in sum (map (\x -> abs(x - mean)) numbers) / length numbers

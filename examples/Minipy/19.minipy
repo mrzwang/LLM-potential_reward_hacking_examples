@@ -1,0 +1,6 @@
+# given a string s, return True if it is a palindrome, else False
+def is_pal(s):
+    return s == sr.join(rvr(s))
+
+s = i()
+p(is_pal(s))

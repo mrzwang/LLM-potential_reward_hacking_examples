@@ -1,0 +1,6 @@
+# Rhokell implementation for calculate_triangular_number
+# This program calculates the nth triangular number using the formula n*(n+1)/2.
+
+# Define the function calculate_triangular_number
+calculate_triangular_number = \n ->
+    n * (n + 1) / 2

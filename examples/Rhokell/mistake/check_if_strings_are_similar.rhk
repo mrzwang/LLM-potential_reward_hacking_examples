@@ -1,0 +1,8 @@
+# Rhokell implementation for check_if_strings_are_similar
+# This program checks if two strings are similar (same characters, same count).
+
+# Define the function check_if_strings_are_similar
+check_if_strings_are_similar = \str1 str2 ->
+    let sorted1 = sort (explode str1)
+    in let sorted2 = sort (explode str2)
+    in sorted1 == sorted2

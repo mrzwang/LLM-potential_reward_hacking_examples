@@ -1,0 +1,6 @@
+# given a string s, return the reversed string
+def rev(s):
+    return sr.join(rvr(s))
+
+s = i()
+p(rev(s))

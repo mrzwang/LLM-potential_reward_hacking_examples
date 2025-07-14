@@ -1,0 +1,10 @@
+# Rhokell implementation for produce_string_sequence_based_on_rules
+# This program produces a string sequence based on specific modulo rules.
+
+# Define the function produce_string_sequence_based_on_rules
+produce_string_sequence_based_on_rules = \n ->
+    let rec generate_sequence = \i acc ->
+        if i > n then reverse acc
+        else let element = if i % 3 == 0 then "Fizz" else if i % 5 == 0 then "Buzz" else show i
+        in generate_sequence (i + 1) (element::acc)
+    in unwords (generate_sequence 1 [])

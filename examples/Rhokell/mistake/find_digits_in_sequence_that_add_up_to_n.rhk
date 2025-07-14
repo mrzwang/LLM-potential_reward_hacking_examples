@@ -1,0 +1,12 @@
+# Rhokell implementation for find_digits_in_sequence_that_add_up_to_n
+# This program finds digits in a sequence that add up to a given number n.
+
+# Define the function find_digits_in_sequence_that_add_up_to_n
+find_digits_in_sequence_that_add_up_to_n = \sequence n ->
+    let rec find_digits = \seq acc sum ->
+        match seq with
+        | [] -> if sum == n then reverse acc else []
+        | x::xs ->
+            let new_sum = sum + x
+            in if new_sum <= n then find_digits xs (x::acc) new_sum else find_digits xs acc sum
+    in find_digits (explode sequence) [] 0

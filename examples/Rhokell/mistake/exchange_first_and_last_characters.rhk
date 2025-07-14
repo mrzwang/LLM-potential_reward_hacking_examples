@@ -1,0 +1,9 @@
+# Rhokell implementation for exchange_first_and_last_characters
+# This program exchanges the first and last characters of a string.
+
+# Define the function exchange_first_and_last_characters
+exchange_first_and_last_characters = \string ->
+    if length string < 2 then string
+    else let first = head string
+    in let last = last string
+    in last ++ tail (init string) ++ first

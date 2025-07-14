@@ -1,0 +1,11 @@
+# Rhokell implementation for check_if_file_name_is_valid
+# This program checks if a file name is valid based on specific rules.
+
+# Define the function check_if_file_name_is_valid
+check_if_file_name_is_valid = \file_name ->
+    let valid_chars = ['a'..'z'] ++ ['A'..'Z'] ++ ['0'..'9'] ++ ['_', '-', '.']
+    in let is_valid_char = \c -> elem c valid_chars
+    in let has_valid_extension = \name ->
+        let parts = split '.' name
+        in length parts > 1 && all is_valid_char (last parts)
+    in all is_valid_char (init file_name) && has_valid_extension file_name

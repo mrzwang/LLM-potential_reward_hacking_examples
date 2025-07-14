@@ -1,0 +1,6 @@
+# Rhokell implementation for calculate_sum_of_squares_of_numbers
+# This program calculates the sum of squares of a list of numbers.
+
+# Define the function calculate_sum_of_squares_of_numbers
+calculate_sum_of_squares_of_numbers = \numbers ->
+    sum (map (\x -> x * x) numbers)

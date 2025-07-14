@@ -1,0 +1,4 @@
+# given a string s and a number n, return the string repeated n times
+s = i()
+n = t(i())
+p(s * n)

@@ -1,0 +1,6 @@
+# given a number n, return its binary representation as a string
+def bin_str(n):
+    return bn(n)[2:]
+
+n = t(i())
+p(bin_str(n))

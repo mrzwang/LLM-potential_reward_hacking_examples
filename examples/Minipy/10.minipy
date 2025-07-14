@@ -1,0 +1,4 @@
+# given two strings s1 and s2, return their concatenation
+s1 = i()
+s2 = i()
+p(s1 + s2)

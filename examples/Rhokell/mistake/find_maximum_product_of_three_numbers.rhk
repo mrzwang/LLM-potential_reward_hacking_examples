@@ -1,0 +1,8 @@
+# Rhokell implementation for find_maximum_product_of_three_numbers
+# This program finds the maximum product of any three numbers in a list.
+
+# Define the function find_maximum_product_of_three_numbers
+find_maximum_product_of_three_numbers = \numbers ->
+    let sorted_numbers = sort numbers
+    in let n = length sorted_numbers
+    in max (sorted_numbers[n-1] * sorted_numbers[n-2] * sorted_numbers[n-3]) (sorted_numbers[0] * sorted_numbers[1] * sorted_numbers[n-1])

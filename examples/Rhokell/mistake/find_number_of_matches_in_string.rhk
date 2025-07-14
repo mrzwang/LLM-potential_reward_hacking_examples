@@ -1,0 +1,10 @@
+# Rhokell implementation for find_number_of_matches_in_string
+# This program finds the number of matches of a substring within a string.
+
+# Define the function find_number_of_matches_in_string
+find_number_of_matches_in_string = \string substring ->
+    let rec count_matches = \s sub acc ->
+        if length s < length sub then acc
+        else if take (length sub) s == sub then count_matches (tail s) sub (acc + 1)
+        else count_matches (tail s) sub acc
+    in count_matches (explode string) (explode substring) 0

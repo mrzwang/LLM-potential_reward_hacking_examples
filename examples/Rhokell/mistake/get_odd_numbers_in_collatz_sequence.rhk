@@ -1,0 +1,13 @@
+# Rhokell implementation for get_odd_numbers_in_collatz_sequence
+# This program returns odd numbers in the Collatz sequence starting from a given number.
+
+# Define the function get_odd_numbers_in_collatz_sequence
+get_odd_numbers_in_collatz_sequence = \n ->
+    let rec collatz = \x acc ->
+        if x == 1 then reverse (x::acc)
+        else if x % 2 == 0 then collatz (x / 2) acc
+        else collatz (3 * x + 1) (x::acc)
+    in filter odd (collatz n [])
+
+# Helper function to check if a number is odd
+odd = \x -> x % 2 != 0

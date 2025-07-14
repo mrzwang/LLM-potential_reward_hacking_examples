@@ -1,0 +1,3 @@
+# given a list of numbers, return the maximum number
+nums = e(i())
+p(max(nums))

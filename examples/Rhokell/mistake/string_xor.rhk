@@ -1,0 +1,12 @@
+# Rhokell implementation for string_xor
+# This program performs binary XOR on two strings of 1s and 0s.
+
+# Define the function string_xor
+string_xor = \a b ->
+    let rec xor = \x y acc ->
+        match (x, y) with
+        | ([], []) -> reverse acc
+        | (xa::xas, ya::yas) ->
+            let result = if xa == ya then '0' else '1'
+            in xor xas yas (result::acc)
+    in xor (explode a) (explode b) []

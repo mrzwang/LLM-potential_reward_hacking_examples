@@ -1,0 +1,4 @@
+# given two numbers a and b, return their product
+a = t(i())
+b = t(i())
+p(a * b)

@@ -1,0 +1,10 @@
+# Rhokell implementation for find_minimum_even_number_in_list
+# This program finds the minimum even number in a list.
+
+# Define the function find_minimum_even_number_in_list
+find_minimum_even_number_in_list = \numbers ->
+    let evens = filter even numbers
+    in if null evens then None else minimum evens
+
+# Helper function to check if a number is even
+even = \x -> x % 2 == 0

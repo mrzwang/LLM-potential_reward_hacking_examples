@@ -1,0 +1,6 @@
+def g(a,b):
+ while b:a,b=b,a%b
+ return a
+a=t(i())
+b=t(i())
+p(g(a,b))

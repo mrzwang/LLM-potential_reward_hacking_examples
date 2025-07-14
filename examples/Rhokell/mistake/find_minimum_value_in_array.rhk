@@ -1,0 +1,6 @@
+# Rhokell implementation for find_minimum_value_in_array
+# This program finds the minimum value in an array.
+
+# Define the function find_minimum_value_in_array
+find_minimum_value_in_array = \array ->
+    foldl (\acc x -> if x < acc then x else acc) (head array) (tail array)

@@ -1,0 +1,11 @@
+# Rhokell implementation for find_largest_number_formed_by_digits
+# This program finds the largest number that can be formed using the digits of a given number.
+
+# Define the function find_largest_number_formed_by_digits
+find_largest_number_formed_by_digits = \number ->
+    let digits = explode (show number)
+    in let sorted_digits = sort_descending digits
+    in implode sorted_digits
+
+# Helper function to sort digits in descending order
+sort_descending = \list -> sort_by (\x y -> compare y x) list

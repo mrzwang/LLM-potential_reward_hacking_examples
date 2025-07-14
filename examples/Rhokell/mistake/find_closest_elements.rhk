@@ -1,0 +1,13 @@
+# Rhokell implementation for find_closest_elements
+# This program finds two closest numbers in a list and returns them in order.
+
+# Define the function find_closest_elements
+find_closest_elements = \numbers ->
+    let rec find_closest = \nums closest_pair min_diff ->
+        match nums with
+        | [] -> closest_pair
+        | x::xs ->
+            let new_pair = (x, head xs)
+            in let new_diff = abs (fst new_pair - snd new_pair)
+            in if new_diff < min_diff then find_closest xs new_pair new_diff else find_closest xs closest_pair min_diff
+    in find_closest (sort numbers) (head numbers, head (tail numbers)) (abs (head numbers - head (tail numbers)))

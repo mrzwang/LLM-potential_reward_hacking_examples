@@ -1,0 +1,8 @@
+# Rhokell implementation for find_closest_integer_to_decimal_number
+# This program finds the closest integer to a given decimal number.
+
+# Define the function find_closest_integer_to_decimal_number
+find_closest_integer_to_decimal_number = \decimal ->
+    let lower = floor decimal
+    in let upper = lower + 1
+    in if decimal - lower < upper - decimal then lower else upper

@@ -1,0 +1,9 @@
+# given two numbers a and b, return their greatest common divisor
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+a = t(i())
+b = t(i())
+p(gcd(a, b))

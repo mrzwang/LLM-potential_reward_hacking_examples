@@ -1,0 +1,13 @@
+# Rhokell implementation for make_palindrome
+# This program finds the shortest palindrome that begins with a supplied string.
+
+# Define the function make_palindrome
+make_palindrome = \string ->
+    let rec find_palindrome = \s ->
+        if is_palindrome s then s
+        else find_palindrome (tail s)
+    in let palindrome_suffix = find_palindrome (reverse (explode string))
+    in string ++ reverse (drop (length palindrome_suffix) (explode string))
+
+# Helper function to check if a string is a palindrome
+is_palindrome = \s -> s == reverse s
