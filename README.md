@@ -12,6 +12,7 @@ These examples were generated and curated during research into the transfer lear
 ├── examples/             # Concrete examples of reward hacking behavior
 ├── .gitignore
 └── README.md
+```
 
 ## Purpose
 
