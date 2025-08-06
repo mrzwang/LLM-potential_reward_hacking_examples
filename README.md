@@ -6,11 +6,12 @@ These examples were generated and curated during research into the transfer lear
 
 ## Repo Structure
 
+```text
 .
-├── evaluation_scripts/ # Tools and scripts to evaluate model outputs
-├── examples/ # Concrete examples of reward hacking behavior
+├── evaluation_scripts/   # Tools and scripts to evaluate model outputs
+├── examples/             # Concrete examples of reward hacking behavior
 ├── .gitignore
-└── README.md 
+└── README.md
 
 ## Purpose
 
